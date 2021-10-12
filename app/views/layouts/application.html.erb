@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ptybrothersv2</title>
+    <title>PTY Brothers</title>
+    <meta name="description" content="Ptybrothers comunidad Unida por la Adrenalina! Movimiento que fue creado con el principal motivo de mantener la escena de los deportes extremos viva en Panamá. Nuestro objetivo es brindar apoyo a riders mediante material audiovisual de alta calidad que demuestre su talento, poniendo así a Panamá en el mapa de los deportes extremos. Se parte del movimiento!">
+    <meta property="og:title" content="PTYBrothers">
+    <meta property="og:description" content="Ptybrothers comunidad Unida por la Adrenalina! Movimiento que fue creado con el principal motivo de mantener la escena de los deportes extremos viva en Panamá. Nuestro objetivo es brindar apoyo a riders mediante material audiovisual de alta calidad que demuestre su talento, poniendo así a Panamá en el mapa de los deportes extremos. Se parte del movimiento!">
+    <%= csrf_meta_tags %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,11 +14,14 @@
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
-
-  <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-
-    <%= yield %>
-  </body>
+<body class="Site">
+  <%= render 'shared/navbar' %>
+  <%= render 'shared/flashes' %>
+  <main class="Site-content">
+    <div class="content">
+      <%= yield %>
+    </div>
+  </main>
+  <%= render 'shared/footer' %>
+</body>
 </html>
